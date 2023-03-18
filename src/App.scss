@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* SCSS HEX */
+$powder-blue: #98c1d9ff;
+$slate-blue: #6969b3ff;
+$tekhelet: #533a7bff;
+$violet-jtc: #4b244aff;
+$licorice: #25171aff;
+$homeBg: #fff;
+$sidePaddings: 5%;
+
+$textColor: $licorice;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+:root {
+  color-scheme: dark light;
+  font-family: 'Roboto Slab', serif;
+}
+
+#root {
+  height: 100%;
+
+}
+
+.App {
+  height: 100%;
+
+  .hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all .6s ease-out;
+
+  }
+
+  .hidden.left {
+    transform: translateX(-300px);
+  }
+
+  .hidden.right {
+    transform: translateX(300px);
+  }
+
+  .hidden.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.navbar {
+  border-bottom: 2px dashed royalblue;
+  display: flex;
+  background-color: $homeBg;
+  height: 15%;
+  color: $licorice ;
+  padding: 0 $sidePaddings ;
+
+  .siteName {
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: $slate-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    flex-grow: 1;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.3rem;
+    justify-content: space-evenly;
+    padding-left: 5rem;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      transition: .3s;
+      color: $textColor;
+
+      &:hover {
+        color: $slate-blue;
+      }
+    }
+  }
+}
+
+.mainSection {
+  height: 85%;
+  overflow-y: auto;
+}
+
+.home {
+  overflow-x: hidden;
+  height: 100%;
+  background-color: $homeBg;
+  position: relative;
+  z-index: -10;
+  padding: 0 $sidePaddings;
+  display: flex;
+  color: $slate-blue;
+  font-family: 'Abel', sans-serif;
+
+  .descCont {
+    padding: 5rem 3rem;
+
+    .header {
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+
+    .desc {
+      padding: 1rem 1rem 0;
+      font-size: 1.4rem;
+      color: $textColor;
+    }
+  }
+
+  img {
+    z-index: -1;
+  }
+}
