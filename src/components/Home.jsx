@@ -1,23 +1,7 @@
 import React, { useEffect } from "react";
-import homeGif from "./assets/home.gif";
+import homeGif from "../assets/home.gif";
 
-import vawe from "./assets/svg.png";
 const Home = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll(".hidden");
-    hiddenElements.forEach((el) => observer.observe(el));
-  }, []);
-
   return (
     <div className="home" id="home">
       <div className="descCont hidden left">
@@ -30,7 +14,9 @@ const Home = () => {
           massa sit amet, condimentum nibh. Ut quis quam erat. Sed ornare
           bibendum nulla sit amet scelerisque. Mauris volutpat neque non varius
           ultricies. Nulla efficitur lacinia justo, vitae gravida justo lacinia
-          non. Aenean nec justo quis mauris tincidunt mattis id non sapien."
+          non. Aenean nec justo quis mauris tincidunt mattis id non sapien.Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo congue
+          accumsan."
         </div>
       </div>
       <img src={homeGif} className="hidden right" />

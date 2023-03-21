@@ -7,9 +7,9 @@ $tekhelet: #533a7bff;
 $violet-jtc: #4b244aff;
 $licorice: #25171aff;
 $homeBg: #fff;
-$sidePaddings: 5%;
+$sidePaddings: 10%;
 
-$textColor: $licorice;
+$textColor: #555;
 
 * {
   margin: 0;
@@ -17,7 +17,26 @@ $textColor: $licorice;
   box-sizing: border-box;
   user-select: none;
   -webkit-user-drag: none;
+
+  img {
+    vertical-align: middle;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $slate-blue;
+    border-radius: 10px;
+    border: 1px inset white;
+  }
 }
+
 
 html,
 body {
@@ -26,7 +45,6 @@ body {
 
 
 :root {
-  color-scheme: dark light;
   font-family: 'Roboto Slab', serif;
 }
 
@@ -38,11 +56,12 @@ body {
 .App {
   height: 100%;
 
+
+
   .hidden {
     opacity: 0;
     filter: blur(3px);
     transition: all .6s ease-out;
-
   }
 
   .hidden.left {
@@ -60,66 +79,110 @@ body {
   }
 }
 
-.navbar {
-  border-bottom: 2px dashed royalblue;
-  display: flex;
-  background-color: $homeBg;
-  height: 15%;
-  color: $licorice ;
-  padding: 0 $sidePaddings ;
 
-  .siteName {
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: $slate-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbarCont {
+  height: 12%;
+  position: relative;
+
+  .navbarWave {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    z-index: 10;
+
+    &.scrolled {
+      display: block;
+    }
   }
 
-  .links {
+  .navbar {
+    height: 100%;
     display: flex;
-    flex-grow: 1;
-    font-family: 'Abel', sans-serif;
-    font-size: 1.3rem;
-    justify-content: space-evenly;
-    padding-left: 5rem;
+    justify-content: space-between;
+    background-color: $homeBg;
+    color: $licorice ;
+    padding: 0 5%;
 
-    .link {
-      text-decoration: none;
-      color: inherit;
+
+    .siteName {
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: $slate-blue;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: 500;
-      transition: .3s;
-      color: $textColor;
+    }
 
-      &:hover {
-        color: $slate-blue;
+    .links {
+      display: flex;
+      font-family: 'Abel', sans-serif;
+      font-size: 1.3rem;
+      padding-top: .7rem;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        transition: all .3s;
+        color: $textColor;
+        padding: 0 1.5rem;
+
+        &:hover {
+          transform: translateY(-3px);
+          text-decoration: none;
+          color: $slate-blue;
+        }
+      }
+    }
+
+    &.scrolled {
+      background-color: $slate-blue;
+
+      .siteName {
+        color: #eee;
+        text-decoration: none;
+      }
+
+      .link {
+        color: #eee;
+
+        &:hover {
+          color: #eee;
+          text-decoration: underline;
+        }
+
       }
     }
   }
 }
 
+
+
+
 .mainSection {
-  height: 85%;
-  overflow-y: auto;
+  height: 88%;
+  overflow-y: overlay;
+  scroll-behavior: smooth;
+  padding-top: 1rem;
 }
 
 .home {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100%;
   background-color: $homeBg;
-  position: relative;
-  z-index: -10;
   padding: 0 $sidePaddings;
   display: flex;
   color: $slate-blue;
   font-family: 'Abel', sans-serif;
 
   .descCont {
-    padding: 5rem 3rem;
+    padding: 5rem 0;
+
+    min-width: 50%;
 
     .header {
       font-size: 2.5rem;
@@ -128,12 +191,33 @@ body {
 
     .desc {
       padding: 1rem 1rem 0;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: $textColor;
+
     }
+
   }
 
+}
+
+
+.effectsCont {
+  height: 100%;
+
   img {
-    z-index: -1;
+    height: 5rem;
+    width: 100%;
+
+  }
+
+  .effects {
+    height: 100%;
+    overflow: hidden;
+    background-color: $powder-blue;
+    padding: 0 $sidePaddings;
+    display: flex;
+    color: $slate-blue;
+    font-family: 'Abel', sans-serif;
+
   }
 }
