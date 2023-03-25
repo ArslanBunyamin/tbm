@@ -64,13 +64,23 @@ body {
     transition: all .6s ease-out;
   }
 
-  .hidden.left {
-    transform: translateX(-300px);
+  .hidden.top {
+    transform: translateY(-300px);
   }
 
   .hidden.right {
     transform: translateX(300px);
   }
+
+
+  .hidden.bottom {
+    transform: translateY(300px);
+  }
+
+  .hidden.left {
+    transform: translateX(-300px);
+  }
+
 
   .hidden.show {
     opacity: 1;
@@ -81,7 +91,7 @@ body {
 
 
 .navbarCont {
-  height: 12%;
+  height: 13%;
   position: relative;
 
   .navbarWave {
@@ -164,7 +174,7 @@ body {
 
 
 .mainSection {
-  height: 88%;
+  height: 87%;
   overflow-y: overlay;
   scroll-behavior: smooth;
   padding-top: 1rem;
@@ -214,10 +224,43 @@ body {
     height: 100%;
     overflow: hidden;
     background-color: $powder-blue;
-    padding: 0 $sidePaddings;
-    display: flex;
-    color: $slate-blue;
+    padding: 2rem $sidePaddings;
+    color: #eee;
     font-family: 'Abel', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1112;
+      box-shadow: 1px 1px 5px #1115;
+      border-radius: 32px;
+      padding: 1.8rem;
+
+      .descCont {
+        padding: 1rem 0;
+
+        .descHeader {
+          padding-bottom: .3rem;
+          font-size: 1.7rem;
+          font-weight: 900;
+        }
+
+        .desc {
+          font-size: 1.1rem;
+          opacity: .7;
+        }
+
+      }
+    }
+
+    .icon {
+      width: 40%;
+      height: auto;
+    }
 
   }
 }
