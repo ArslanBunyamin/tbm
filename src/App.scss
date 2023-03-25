@@ -59,26 +59,26 @@ body {
 
 
   .hidden {
-    opacity: 0;
+    opacity: .5;
     filter: blur(3px);
     transition: all .6s ease-out;
   }
 
   .hidden.top {
-    transform: translateY(-300px);
+    transform: translateY(-180px);
   }
 
   .hidden.right {
-    transform: translateX(300px);
+    transform: translateX(320px);
   }
 
 
   .hidden.bottom {
-    transform: translateY(300px);
+    transform: translateY(180px);
   }
 
   .hidden.left {
-    transform: translateX(-300px);
+    transform: translateX(-320px);
   }
 
 
@@ -99,7 +99,7 @@ body {
     position: absolute;
     width: 100%;
     height: 30%;
-    z-index: 10;
+    z-index: 100;
 
     &.scrolled {
       display: block;
@@ -113,6 +113,7 @@ body {
     background-color: $homeBg;
     color: $licorice ;
     padding: 0 5%;
+    overflow-x: hidden;
 
 
     .siteName {
@@ -225,7 +226,7 @@ body {
     overflow: hidden;
     background-color: $powder-blue;
     padding: 2rem $sidePaddings;
-    color: #eee;
+    color: $textColor;
     font-family: 'Abel', sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -235,13 +236,14 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #1112;
-      box-shadow: 1px 1px 5px #1115;
+      background-color: #fff3;
       border-radius: 32px;
       padding: 1.8rem;
+      overflow: hidden;
 
       .descCont {
         padding: 1rem 0;
+        overflow: hidden;
 
         .descHeader {
           padding-bottom: .3rem;
@@ -250,8 +252,9 @@ body {
         }
 
         .desc {
-          font-size: 1.1rem;
+          font-size: 1.15rem;
           opacity: .7;
+          font-weight: 400;
         }
 
       }
@@ -263,4 +266,72 @@ body {
     }
 
   }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .hidden.top {
+    transform: translateX(-320px) !important;
+  }
+
+  .hidden.bottom {
+    transform: translateX(320px) !important;
+  }
+
+  .hidden.show {
+    opacity: 1;
+    transform: translateX(0) !important;
+    filter: blur(0);
+  }
+
+  .navbarCont {
+    height: 8%;
+
+
+    .navbar {
+
+      .siteName {
+        font-size: 1.1rem !important;
+      }
+
+      .links {
+        display: none !important;
+      }
+    }
+  }
+
+  .mainSection {
+    height: 92%;
+
+
+    .home {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+
+      .descCont {
+        order: 2;
+        padding: 0;
+
+        .header {
+          font-size: 2.3rem;
+        }
+      }
+
+      img {
+        width: 100%;
+        padding: 0 2rem;
+        order: 1;
+      }
+    }
+
+    .effects {
+      height: auto !important;
+      grid-template-columns: 1fr !important;
+
+
+    }
+  }
+
+
 }

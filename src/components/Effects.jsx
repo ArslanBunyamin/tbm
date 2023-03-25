@@ -9,10 +9,10 @@ const Effects = () => {
     <div className="effectsCont">
       <img src={wave} />
       <div className="effects" id="effects">
-        <div className="card">
+        <div className="card hidden left">
           <img className="icon" src={exhausted} />
           <div className="descCont">
-            <div className="descHeader">yorgunluk</div>
+            <div className="descHeader">Yorgunluk</div>
             <div className="desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
@@ -24,10 +24,10 @@ const Effects = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card hidden top">
           <img className="icon" src={depressed} />
           <div className="descCont">
-            <div className="descHeader">stres</div>
+            <div className="descHeader">Stres</div>
             <div className="desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
@@ -39,10 +39,10 @@ const Effects = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card hidden right">
           <img className="icon" src={neckPain} />
           <div className="descCont">
-            <div className="descHeader">erken yaşta saglık problemleri</div>
+            <div className="descHeader">Erken yasta saglık problemleri</div>
             <div className="desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
