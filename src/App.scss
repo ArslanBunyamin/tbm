@@ -33,7 +33,7 @@ $textColor: #555;
   &::-webkit-scrollbar-thumb {
     background: $slate-blue;
     border-radius: 10px;
-    border: 1px inset white;
+    border: 1px inset #6969b377;
   }
 }
 
@@ -60,7 +60,6 @@ body {
 
   .hidden {
     opacity: .5;
-    filter: blur(3px);
     transition: all .6s ease-out;
   }
 
@@ -85,7 +84,6 @@ body {
   .hidden.show {
     opacity: 1;
     transform: translateX(0);
-    filter: blur(0);
   }
 }
 
@@ -112,7 +110,7 @@ body {
     justify-content: space-between;
     background-color: $homeBg;
     color: $licorice ;
-    padding: 0 5%;
+    padding-inline: 5%;
     overflow-x: hidden;
 
 
@@ -185,7 +183,7 @@ body {
   overflow: hidden;
   height: 100%;
   background-color: $homeBg;
-  padding: 0 $sidePaddings;
+  padding-inline: $sidePaddings;
   display: flex;
   color: $slate-blue;
   font-family: 'Abel', sans-serif;
@@ -193,7 +191,6 @@ body {
   .descCont {
     padding: 5rem 0;
 
-    min-width: 50%;
 
     .header {
       font-size: 2.5rem;
@@ -253,7 +250,7 @@ body {
 
         .desc {
           font-size: 1.15rem;
-          opacity: .7;
+          opacity: .5;
           font-weight: 400;
         }
 
@@ -269,6 +266,7 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
+  $sidePaddings: 5%;
 
   .hidden.top {
     transform: translateX(-320px) !important;
@@ -287,11 +285,10 @@ body {
   .navbarCont {
     height: 8%;
 
-
     .navbar {
 
       .siteName {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
       }
 
       .links {
@@ -308,6 +305,7 @@ body {
       flex-direction: column;
       align-items: center;
       height: auto;
+      padding-inline: $sidePaddings;
 
       .descCont {
         order: 2;
@@ -320,6 +318,7 @@ body {
 
       img {
         width: 100%;
+        height: auto;
         padding: 0 2rem;
         order: 1;
       }
@@ -328,8 +327,7 @@ body {
     .effects {
       height: auto !important;
       grid-template-columns: 1fr !important;
-
-
+      padding-inline: $sidePaddings;
     }
   }
 
