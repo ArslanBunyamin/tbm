@@ -6,7 +6,6 @@ $slate-blue: #6969b3ff;
 $tekhelet: #533a7bff;
 $violet-jtc: #4b244aff;
 $licorice: #25171aff;
-$homeBg: #fff;
 $sidePaddings: 10%;
 
 $textColor: #555;
@@ -59,7 +58,7 @@ body {
 
 
   .hidden {
-    opacity: .5;
+    opacity: 0;
     transition: all .6s ease-out;
   }
 
@@ -108,13 +107,15 @@ body {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: $homeBg;
+    background-color: #fff;
     color: $licorice ;
     padding-inline: 5%;
     overflow-x: hidden;
+    overflow: hidden;
 
 
     .siteName {
+      word-break: keep-all;
       font-weight: 900;
       font-size: 2.2rem;
       color: $slate-blue;
@@ -179,38 +180,52 @@ body {
   padding-top: 1rem;
 }
 
-.home {
-  overflow: hidden;
-  height: 100%;
-  background-color: $homeBg;
-  padding-inline: $sidePaddings;
-  display: flex;
-  color: $slate-blue;
-  font-family: 'Abel', sans-serif;
+.homeCont {
 
-  .descCont {
-    padding: 5rem 0;
+  img {
+    width: 100%;
+    height: 5rem;
+  }
 
+  .home {
+    overflow: hidden;
+    height: auto;
+    background-color: #fff;
+    padding: 0 $sidePaddings 2rem;
+    display: flex;
+    color: $slate-blue;
+    font-family: 'Abel', sans-serif;
 
-    .header {
-      font-size: 2.5rem;
-      font-weight: 900;
+    img {
+      height: 100%;
     }
 
-    .desc {
-      padding: 1rem 1rem 0;
-      font-size: 1.3rem;
-      color: $textColor;
+    .descCont {
+      padding: 5rem 0;
+
+
+      .header {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+
+      .desc {
+        padding: 1rem 1rem 0;
+        font-size: 1.3rem;
+        color: $textColor;
+
+      }
 
     }
 
   }
-
 }
 
 
+
 .effectsCont {
-  height: 100%;
+  height: auto;
+  background-color: $powder-blue;
 
   img {
     height: 5rem;
@@ -221,7 +236,6 @@ body {
   .effects {
     height: 100%;
     overflow: hidden;
-    background-color: $powder-blue;
     padding: 2rem $sidePaddings;
     color: $textColor;
     font-family: 'Abel', sans-serif;
@@ -250,22 +264,70 @@ body {
 
         .desc {
           font-size: 1.15rem;
-          opacity: .5;
+          opacity: .8;
           font-weight: 400;
         }
-
       }
     }
 
     .icon {
-      width: 40%;
+      width: 30%;
       height: auto;
     }
 
   }
 }
 
+.graphicsCont {
+  height: auto;
+  background-color: #ecebe7;
+
+  .graphics {
+    overflow: hidden;
+    height: 100%;
+    padding: 2rem $sidePaddings 0;
+    display: flex;
+
+    color: $slate-blue;
+    font-family: 'Abel', sans-serif;
+
+    img {
+      height: 500px;
+    }
+
+
+    .descCont {
+      padding: 1rem 0 0 2rem;
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .header {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+
+      .desc {
+        padding: .5rem 1rem;
+        font-size: 1.3rem;
+        opacity: .8;
+        color: $textColor;
+
+      }
+    }
+  }
+}
+
+
 @media only screen and (max-width: 700px) {
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
   $sidePaddings: 5%;
 
   .hidden.top {
@@ -279,7 +341,6 @@ body {
   .hidden.show {
     opacity: 1;
     transform: translateX(0) !important;
-    filter: blur(0);
   }
 
   .navbarCont {
@@ -312,7 +373,7 @@ body {
         padding: 0;
 
         .header {
-          font-size: 2.3rem;
+          font-size: 2.2rem;
         }
       }
 
@@ -329,7 +390,39 @@ body {
       grid-template-columns: 1fr !important;
       padding-inline: $sidePaddings;
     }
+
+    .graphics {
+      height: auto !important;
+      flex-direction: column;
+      padding-inline: $sidePaddings;
+
+      img {
+        order: 2;
+        width: 100%;
+        height: auto;
+      }
+
+      .descCont {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+          font-size: 2.2rem;
+        }
+
+        .desc {
+          padding-bottom: 1rem;
+        }
+      }
+    }
   }
 
 
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }

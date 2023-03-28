@@ -3,20 +3,22 @@ import Effects from "./components/Effects";
 import Home from "./components/Home";
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
+import Graphics from "./components/Graphics";
 
 function App() {
   useEffect(() => {
-    //check if hidden elements is intersecting
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          entry.target.src = entry.target.src;
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
-    });
+    //check if hidden elements are intersecting
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+          if (entry.isIntersecting) {
+            entry.target.src = entry.target.src;
+          }
+        });
+      },
+      { root: document.querySelector(".mainSection") }
+    );
 
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));
@@ -47,6 +49,7 @@ function App() {
       <div className="mainSection">
         <Home />
         <Effects />
+        <Graphics />
       </div>
     </div>
   );

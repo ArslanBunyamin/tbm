@@ -12,8 +12,8 @@ const Navbar = () => {
           <a className="link" href="#effects">
             Etkileri
           </a>
-          <a className="link" href="#home">
-            page2
+          <a className="link" href="#graphics">
+            Sayısal veriler
           </a>
           <a className="link" href="#home">
             page3

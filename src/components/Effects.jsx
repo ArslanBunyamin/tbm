@@ -1,13 +1,12 @@
 import React from "react";
-import wave from "../assets/effectsVawe.png";
 import exhausted from "../assets/exhausted.png";
 import depressed from "../assets/depression.png";
 import neckPain from "../assets/neck.png";
+import wave from "../assets/graphicsWave.png";
 
 const Effects = () => {
   return (
     <div className="effectsCont">
-      <img src={wave} />
       <div className="effects" id="effects">
         <div className="card hidden left">
           <img className="icon" src={exhausted} />
@@ -53,6 +52,7 @@ const Effects = () => {
           </div>
         </div>
       </div>
+      <img src={wave} />
     </div>
   );
 };
