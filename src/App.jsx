@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Graphics from "./components/Graphics";
+import WhatToDo from "./components/WhatToDo";
 
 function App() {
   useEffect(() => {
@@ -40,7 +41,7 @@ function App() {
     //set img loadings to lazy
     const imgs = document.querySelectorAll("img");
     imgs.forEach((el) => {
-      el.setAttribute("loading", "lazys");
+      el.setAttribute("loading", "lazy");
     });
   }, []);
   return (
@@ -50,6 +51,7 @@ function App() {
         <Home />
         <Effects />
         <Graphics />
+        <WhatToDo />
       </div>
     </div>
   );

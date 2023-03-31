@@ -55,11 +55,10 @@ body {
 .App {
   height: 100%;
 
-
-
   .hidden {
+    scale: .5;
     opacity: 0;
-    transition: all .6s ease-out;
+    transition: all .5s ease-out;
   }
 
   .hidden.top {
@@ -81,6 +80,7 @@ body {
 
 
   .hidden.show {
+    scale: 1;
     opacity: 1;
     transform: translateX(0);
   }
@@ -88,14 +88,14 @@ body {
 
 
 .navbarCont {
-  height: 13%;
+  height: 4.5rem;
   position: relative;
 
   .navbarWave {
     display: none;
     position: absolute;
     width: 100%;
-    height: 30%;
+    height: 1.5rem;
     z-index: 100;
 
     &.scrolled {
@@ -117,7 +117,7 @@ body {
     .siteName {
       word-break: keep-all;
       font-weight: 900;
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: $slate-blue;
       display: flex;
       justify-content: center;
@@ -127,7 +127,7 @@ body {
     .links {
       display: flex;
       font-family: 'Abel', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       padding-top: .7rem;
 
       .link {
@@ -139,7 +139,7 @@ body {
         font-weight: 600;
         transition: all .3s;
         color: $textColor;
-        padding: 0 1.5rem;
+        padding: 0 1.2rem;
 
         &:hover {
           transform: translateY(-3px);
@@ -170,26 +170,24 @@ body {
   }
 }
 
-
-
-
 .mainSection {
-  height: 87%;
+  height: calc(100% - 4.5rem);
   overflow-y: overlay;
   scroll-behavior: smooth;
   padding-top: 1rem;
+
+  .waves {
+    height: 5rem;
+    width: 100%;
+  }
 }
 
 .homeCont {
-
-  img {
-    width: 100%;
-    height: 5rem;
-  }
+  height: calc(100% + 5rem);
 
   .home {
     overflow: hidden;
-    height: auto;
+    height: calc(100% - 5rem);
     background-color: #fff;
     padding: 0 $sidePaddings 2rem;
     display: flex;
@@ -227,72 +225,79 @@ body {
   height: auto;
   background-color: $powder-blue;
 
-  img {
-    height: 5rem;
-    width: 100%;
-
-  }
-
   .effects {
     height: 100%;
     overflow: hidden;
-    padding: 2rem $sidePaddings;
+    padding: 1rem $sidePaddings;
     color: $textColor;
-    font-family: 'Abel', sans-serif;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #fff3;
-      border-radius: 32px;
-      padding: 1.8rem;
-      overflow: hidden;
+    .header {
+      text-decoration: underline;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: .5rem 0 1.5rem;
+      color: #eee;
+    }
 
-      .descCont {
-        padding: 1rem 0;
+    .cards {
+      font-family: 'Abel', sans-serif;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff3;
+        border-radius: 16px;
+        padding: 1.8rem;
         overflow: hidden;
 
-        .descHeader {
-          padding-bottom: .3rem;
-          font-size: 1.7rem;
-          font-weight: 900;
-        }
+        .descCont {
+          padding: .4rem 0;
+          overflow: hidden;
 
-        .desc {
-          font-size: 1.15rem;
-          opacity: .8;
-          font-weight: 400;
+          .descHeader {
+            padding-bottom: .3rem;
+            font-size: 1.7rem;
+            font-weight: 900;
+          }
+
+          .desc {
+            font-size: 1.15rem;
+            opacity: .8;
+            font-weight: 400;
+          }
         }
+      }
+
+      .icon {
+        width: 30%;
+        height: auto;
       }
     }
 
-    .icon {
-      width: 30%;
-      height: auto;
-    }
 
   }
 }
 
 .graphicsCont {
-  height: auto;
+  height: calc(100% + 5rem);
   background-color: #ecebe7;
 
   .graphics {
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - 5rem);
     padding: 2rem $sidePaddings 0;
     display: flex;
-
     color: $slate-blue;
     font-family: 'Abel', sans-serif;
 
     img {
-      height: 500px;
+      height: 100%;
     }
 
 
@@ -316,6 +321,66 @@ body {
         opacity: .8;
         color: $textColor;
 
+      }
+    }
+  }
+}
+
+.whatToDoCont {
+  height: auto;
+
+  .whatToDo {
+    overflow: hidden;
+    height: 100%;
+    background-color: $tekhelet;
+    padding: 0 $sidePaddings 3rem;
+    color: #eee;
+    font-family: 'Abel', sans-serif;
+
+    .header {
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 900;
+      padding-bottom: 3rem;
+      color: #eee;
+      text-decoration: underline;
+      transform: rotate(-5deg);
+    }
+
+    .suggestions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      color: $textColor;
+
+
+      .hidden.show {
+        transform: translateX(0) rotate(-4deg);
+      }
+
+      .suggestion {
+        padding: .5rem;
+        display: flex;
+        background-color: #eee;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .descCont {
+          padding: .5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .descHeader {
+            font-size: 1.5rem;
+            color: $slate-blue;
+            font-weight: 900;
+          }
+
+          .desc {
+            font-size: 1.1rem;
+          }
+        }
       }
     }
   }
@@ -362,67 +427,93 @@ body {
     height: 92%;
 
 
-    .home {
-      flex-direction: column;
-      align-items: center;
+    .homeCont {
       height: auto;
-      padding-inline: $sidePaddings;
 
-      .descCont {
-        order: 2;
-        padding: 0;
+      .home {
+        flex-direction: column;
+        align-items: center;
+        padding-inline: $sidePaddings;
 
-        .header {
-          font-size: 2.2rem;
+        .descCont {
+          order: 2;
+          padding: 0;
+
+          .header {
+            font-size: 2.2rem;
+          }
         }
-      }
 
-      img {
-        width: 100%;
-        height: auto;
-        padding: 0 2rem;
-        order: 1;
+        img {
+          width: 100%;
+          height: auto;
+          padding: 0 2rem;
+          order: 1;
+        }
       }
     }
 
     .effects {
-      height: auto !important;
-      grid-template-columns: 1fr !important;
       padding-inline: $sidePaddings;
+
+      .cards {
+        grid-template-columns: 1fr !important;
+      }
     }
 
-    .graphics {
-      height: auto !important;
-      flex-direction: column;
-      padding-inline: $sidePaddings;
+    .graphicsCont {
+      height: auto;
 
-      img {
-        order: 2;
-        width: 100%;
-        height: auto;
-      }
-
-      .descCont {
-        padding: 1rem 0;
-        display: flex;
+      .graphics {
         flex-direction: column;
+        padding-inline: $sidePaddings;
+
+        img {
+          order: 2;
+          width: 100%;
+          height: auto;
+        }
+
+        .descCont {
+          padding: 1rem 0;
+          display: flex;
+          flex-direction: column;
+
+          .header {
+            font-size: 2.2rem;
+          }
+
+          .desc {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .whatToDoCont {
+      .whatToDo {
+        padding-inline: $sidePaddings;
 
         .header {
-          font-size: 2.2rem;
+          transform: rotate(0);
+          padding: 2rem 0;
         }
 
-        .desc {
-          padding-bottom: 1rem;
+        .suggestions {
+          grid-template-columns: 1fr !important;
+
+          .suggestion {
+            flex-direction: column;
+            text-align: center;
+
+            .descCont {
+              padding: 0 .5rem 1rem;
+            }
+          }
         }
       }
     }
   }
 
 
-}
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
 }

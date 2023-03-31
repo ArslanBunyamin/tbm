@@ -21,9 +21,9 @@ const Home = () => {
             consectetur adipiscing elit. Sed commodo congue accumsan."
           </div>
         </div>
-        <img src={homeGif} className="hidden right" />
+        <img src={homeGif} className="hidden" />
       </div>
-      <img src={wave} />
+      <img src={wave} className="waves" />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import graph from "../assets/graphic.jpg";
 import graphGif from "../assets/graph.gif";
+import wave from "../assets/whatToDoWave.png";
 
 const Graphics = () => {
   return (
@@ -21,9 +22,10 @@ const Graphics = () => {
             mauris fringilla blandit sed quis eros. Cras porttitor erat
             faucibus, dictum massa sit amet, condimentum nibh."
           </div>
-          <img src={graphGif} className="hidden right" />
+          <img src={graphGif} className="hidden" />
         </div>
       </div>
+      <img src={wave} className="waves" />
     </div>
   );
 };
