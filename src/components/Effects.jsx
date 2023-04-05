@@ -15,13 +15,11 @@ const Effects = () => {
             <div className="descCont">
               <div className="descHeader">Yorgunluk</div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
-                leo quis velit dignissim ornare. Duis fringilla orci nisi.
-                Mauris urna libero, venenatis pulvinar enim in, sollicitudin
-                elementum magna. Pellentesque habitant morbi tristique senectus
-                et netus et malesuada fames ac turpis egestas. Aliquam interdum
-                ante sed eros tincidunt blandit.
+                Birçok insan, teknoloji cihazlarına uzun saatler boyunca bakarak
+                yorgunluk, bas agrısı, göz yorgunlugu ve uyku problemleri
+                yasayabilir. Ayrıca, sosyal medya ve diger teknolojik
+                uygulamaların sürekli olarak yenilenen içerikleriyle ugrasmak da
+                zihinsel yorgunluga neden olabilir.
               </div>
             </div>
           </div>
@@ -30,13 +28,11 @@ const Effects = () => {
             <div className="descCont">
               <div className="descHeader">Stres</div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
-                leo quis velit dignissim ornare. Duis fringilla orci nisi.
-                Mauris urna libero, venenatis pulvinar enim in, sollicitudin
-                elementum magna. Pellentesque habitant morbi tristique senectus
-                et netus et malesuada fames ac turpis egestas. Aliquam interdum
-                ante sed eros tincidunt blandit.
+                Teknoloji bagımlılıgı ile depresyon ve anksiyete arasında bir
+                iliski olabilecegine dair bazı kanıtlar bulunmaktadır.
+                Teknoloji, son derece kullanıslı ve pratik bir araç olabilirken,
+                asırı kullanım bagımlılıga neden olabilir ve bu da zihinsel
+                saglık üzerinde olumsuz etkilere yol açabilir.
               </div>
             </div>
           </div>
@@ -45,11 +41,12 @@ const Effects = () => {
             <div className="descCont">
               <div className="descHeader">Erken yasta saglık problemleri</div>
               <div className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                finibus sapien nisl, non iaculis lectus commodo id. Duis gravida
-                leo quis velit dignissim ornare. Duis fringilla orci nisi.
-                Mauris urna libero, venenatis pulvinar enim in, sollicitudin
-                elementum magna.
+                Ekran basında uzun saatler geçirmek boyun ve omuz bölgesindeki
+                kaslarda agrıya neden olmakla beraber omurga egriligi, kamburluk
+                gibi sorunlara sebebiyet veriyor. Bu durum özellikle de
+                çocukları ve gelisme çagındaki gençleri olumsuz etkiliyor. Durus
+                ve oturus bozuklugundan kaynaklanan kas gerilmeleri kas ve
+                iskelet sistemi bozukluklarına yol açıyor
               </div>
             </div>
           </div>

@@ -16,11 +16,11 @@ const Graphics = () => {
         <div className="descCont hidden right">
           <div className="header">Sayısal veriler</div>
           <div className="desc">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae
-            erat vitae lorem faucibus suscipit eu non ipsum. Pellentesque et
-            bibendum ipsum, eget placerat sapien. Phasellus et tellus quis
-            mauris fringilla blandit sed quis eros. Cras porttitor erat
-            faucibus, dictum massa sit amet, condimentum nibh."
+            "Tabloda; teknoloji bagımlılıgının cihaz, platform ve saat bazında
+            agırlık yüzdeleri görülüyor. Kolay ulasılabilirlikleri ve hızlı
+            arayüzleriyle büyük çogunlugu akıllı telefonlar olusturuyor. Sosyal
+            medya ise kısa videolar ile anlık dopamin etkisi yaratarak
+            saatlerimizi harcıyor."
           </div>
           <img src={graphGif} className="hidden" />
         </div>
