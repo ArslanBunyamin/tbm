@@ -122,6 +122,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-decoration: underline;
     }
 
     .links {
@@ -199,6 +200,9 @@ body {
     }
 
     .descCont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 5rem 0;
 
 
@@ -333,7 +337,7 @@ body {
     overflow: hidden;
     height: 100%;
     background-color: $tekhelet;
-    padding: 0 $sidePaddings 3rem;
+    padding: 0 $sidePaddings 5rem;
     color: #eee;
     font-family: 'Abel', sans-serif;
 
@@ -359,25 +363,31 @@ body {
       }
 
       .suggestion {
-        padding: .5rem;
         display: flex;
-        background-color: #eee;
+        background-color: #e7d9fa;
         border-radius: 1rem;
         overflow: hidden;
 
+        img {
+          width: 250px;
+          height: auto;
+          transform: rotate(0deg) !important;
+        }
+
         .descCont {
-          padding: .5rem;
+          padding: 1rem 1rem 1rem 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
 
           .descHeader {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: $slate-blue;
             font-weight: 900;
           }
 
           .desc {
+            padding-top: .3rem;
             font-size: 1.1rem;
           }
         }
@@ -504,10 +514,14 @@ body {
 
           .suggestion {
             flex-direction: column;
-            text-align: center;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
 
             .descCont {
-              padding: 0 .5rem 1rem;
+              padding: 1.5rem;
             }
           }
         }

@@ -8,7 +8,7 @@ const Effects = () => {
   return (
     <div className="effectsCont">
       <div className="effects" id="effects">
-        <div className="header hidden">Olumsuz Etkileri</div>
+        <div className="header">Olumsuz Etkileri</div>
         <div className="cards">
           <div className="card hidden left">
             <img className="icon" src={exhausted} />

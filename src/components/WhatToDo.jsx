@@ -15,7 +15,7 @@ const WhatToDo = () => {
               <div className="descHeader">Teknolojisiz zamanlar yaratın</div>
               <div className="desc">
                 Günlük rutininizin bir parçası olarak teknolojisiz zamanlar
-                yaratın. Bu, kitap okumak, yürüyüş yapmak veya arkadaşlarınızla
+                yaratın. Bu, kitap okumak, yürüyüs yapmak veya arkadaslarınızla
                 zaman geçirmek gibi aktiviteleri içerebilir.
               </div>
             </div>
@@ -35,7 +35,7 @@ const WhatToDo = () => {
             <div className="descCont">
               <div className="descHeader">Kendinize baska hobiler edinin</div>
               <div className="desc">
-                Yemek yapmak, müzik dinlemek, el işleri yapmak veya bahçe işleri
+                Yemek yapmak, müzik dinlemek, el isleri yapmak veya bahçe isleri
                 gibi aktiviteler size hem keyifli bir zaman geçirme fırsatı
                 sunar hem de teknoloji kullanımınızı azaltabilir.
               </div>
@@ -46,9 +46,9 @@ const WhatToDo = () => {
             <div className="descCont">
               <div className="descHeader">Profesyonel yardım alın</div>
               <div className="desc">
-                Eğer teknoloji bağımlılığı konusunda ciddi bir sorununuz varsa,
-                profesyonel yardım alabilirsiniz. Bir terapist veya danışmanla
-                çalışmak size yardımcı olabilir.
+                Eger teknoloji bagımlılıgı konusunda ciddi bir sorununuz varsa,
+                profesyonel yardım alabilirsiniz. Bir terapist veya danısmanla
+                çalısmak size yardımcı olabilir.
               </div>
             </div>
           </div>
