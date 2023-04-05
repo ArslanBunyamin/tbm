@@ -249,7 +249,7 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       padding-top: 3rem;
-      gap: 1rem;
+      gap: 2rem;
 
       .card {
         display: flex;
@@ -473,6 +473,11 @@ body {
 
       .cards {
         grid-template-columns: 1fr !important;
+        padding-top: 0;
+
+        &:nth-child(2) {
+          transform: translateY(0) !important;
+        }
       }
     }
 
