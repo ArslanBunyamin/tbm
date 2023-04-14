@@ -154,13 +154,13 @@ body {
     .hamburger {
       display: none;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 28px;
+      height: 28px;
       z-index: 10;
 
       span {
         border: 1px solid black;
-        margin-top: 7.5px;
         pointer-events: none;
         transition: .3s;
       }
