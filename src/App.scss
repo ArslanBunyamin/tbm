@@ -22,7 +22,7 @@ $textColor: #555;
   }
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
@@ -40,6 +40,7 @@ $textColor: #555;
 html,
 body {
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -96,7 +97,7 @@ body {
     position: absolute;
     width: 100%;
     height: 1.5rem;
-    z-index: 100;
+    z-index: 5;
 
     &.scrolled {
       display: block;
@@ -150,8 +151,46 @@ body {
       }
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 28px;
+      z-index: 10;
+
+      span {
+        border: 1px solid black;
+        margin-top: .4rem;
+        pointer-events: none;
+        transition: .5s;
+      }
+
+      span.active {
+        border-color: #fff
+      }
+
+      .top.active {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+
+      .mid.active {
+        opacity: 0;
+        transform: translateX(120px);
+      }
+
+      .bot.active {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+    }
+
     &.scrolled {
       background-color: $slate-blue;
+
+      .hamburger {
+        span {
+          border-color: #fff;
+        }
+      }
 
       .siteName {
         color: #eee;
@@ -428,13 +467,70 @@ body {
     height: 8%;
 
     .navbar {
+      display: flex;
+      align-items: center;
 
       .siteName {
         font-size: 1.2rem !important;
       }
 
       .links {
-        display: none !important;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        background-color: #000c;
+        padding: 0;
+        transform: scaleY(0);
+        opacity: 0;
+        transform-origin: top;
+        transition: transform .5s, opacity .7s;
+
+        .link {
+          color: #eee;
+          border-radius: .5rem;
+          padding: 1.8rem;
+          font-weight: bold;
+          font-size: 2.2rem;
+          transition: transform .7s, opacity .3s;
+          transition-delay: transform 1s, opacity .4s;
+
+
+          &:hover {
+            transform: translateY(-3px);
+            text-decoration: none;
+            color: $slate-blue;
+          }
+        }
+
+        .link.left {
+          opacity: 0;
+          transform: translateX(-320px);
+        }
+
+        .link.right {
+          opacity: 0;
+          transform: translateX(320px);
+        }
+      }
+
+      .hamburger {
+        display: flex;
+        z-index: 10;
+      }
+
+      .links.active {
+        transform: scaleY(1);
+        opacity: 1;
+
+        .link {
+          opacity: 1;
+          transform: translate(0);
+        }
       }
     }
   }
