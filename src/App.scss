@@ -160,7 +160,8 @@ body {
       z-index: 10;
 
       span {
-        border: 2px solid black;
+        border: 2px solid #6969b3;
+        border-radius: 50%;
         pointer-events: none;
         transition: .3s;
       }
