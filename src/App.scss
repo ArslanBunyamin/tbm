@@ -154,32 +154,32 @@ body {
     .hamburger {
       display: none;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       width: 28px;
       z-index: 10;
 
       span {
         border: 1px solid black;
-        margin-top: .4rem;
+        margin-top: 7.5px;
         pointer-events: none;
-        transition: .5s;
+        transition: .3s;
       }
 
       span.active {
-        border-color: #fff
+        border-color: #fff;
+        transform-origin: left;
       }
 
       .top.active {
-        transform: translateY(8.5px) rotate(45deg);
+        transform: rotate(45deg);
       }
 
       .mid.active {
         opacity: 0;
-        transform: translateX(120px);
       }
 
       .bot.active {
-        transform: translateY(-8.5px) rotate(-45deg);
+        transform: rotate(-45deg);
       }
     }
 
@@ -382,7 +382,7 @@ body {
     overflow: hidden;
     height: 100%;
     background-color: $tekhelet;
-    padding: 0 $sidePaddings 5rem;
+    padding: 0 $sidePaddings 3rem;
     color: #eee;
     font-family: 'Abel', sans-serif;
 
@@ -468,10 +468,11 @@ body {
 
     .navbar {
       display: flex;
+      justify-content: space-between;
       align-items: center;
 
       .siteName {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
       }
 
       .links {
@@ -483,7 +484,7 @@ body {
         width: 100%;
         height: 100vh;
         z-index: 10;
-        background-color: #000c;
+        background-color: #000d;
         padding: 0;
         transform: scaleY(0);
         opacity: 0;
