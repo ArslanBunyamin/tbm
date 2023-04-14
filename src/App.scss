@@ -172,7 +172,7 @@ body {
       }
 
       .top.active {
-        transform: rotate(43deg);
+        transform: rotate(41deg);
       }
 
       .mid.active {
@@ -180,7 +180,7 @@ body {
       }
 
       .bot.active {
-        transform: rotate(-43deg);
+        transform: rotate(-41deg);
       }
     }
 
@@ -497,7 +497,7 @@ body {
           border-radius: .5rem;
           padding: 1.8rem;
           font-weight: bold;
-          font-size: 2rem;
+          font-size: 1.7rem;
           transition: transform .7s, opacity .3s;
           transition-delay: transform 1s, opacity .4s;
 
