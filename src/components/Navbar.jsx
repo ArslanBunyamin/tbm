@@ -5,10 +5,11 @@ const Navbar = () => {
   return (
     <div className="navbarCont">
       <div className="navbar">
-        <a href="#home" className="siteName">
-          Teknoloji Bağımlılığıyla Mücadele
-        </a>
+        <div className="siteName">Teknoloji Bağımlılığıyla Mücadele</div>
         <div className="links">
+          <a className="link" href="#home">
+            Nedir
+          </a>
           <a className="link" href="#effects">
             Etkileri
           </a>
@@ -17,9 +18,6 @@ const Navbar = () => {
           </a>
           <a className="link" href="#whatToDo">
             Ne yapılmalı?
-          </a>
-          <a className="link" href="#home">
-            page5
           </a>
         </div>
       </div>
