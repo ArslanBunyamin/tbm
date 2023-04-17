@@ -87,7 +87,6 @@ body {
   }
 }
 
-
 .navbarCont {
   height: 4.5rem;
   position: relative;
@@ -131,6 +130,7 @@ body {
       font-family: 'Abel', sans-serif;
       font-size: 1.2rem;
       padding-top: .7rem;
+      overflow: hidden;
 
       .link {
         text-decoration: none;
