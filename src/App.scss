@@ -618,18 +618,28 @@ body {
         }
 
         .suggestions {
-          grid-template-columns: 1fr !important;
+          gap: 1rem;
 
           .suggestion {
             flex-direction: column;
+            align-items: center;
 
             img {
-              width: 100%;
+              padding: 4px;
+              width: 80%;
               height: auto;
             }
 
             .descCont {
-              padding: 1.5rem;
+              padding: 0 1rem 1rem;
+
+              .descHeader {
+                font-size: 1rem;
+              }
+
+              .desc {
+                font-size: .8rem;
+              }
             }
           }
         }
