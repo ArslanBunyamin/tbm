@@ -622,9 +622,9 @@ body {
 
           .suggestion {
             flex-direction: column;
-            align-items: center;
 
             img {
+              align-self: center;
               padding: 4px;
               width: 80%;
               height: auto;
