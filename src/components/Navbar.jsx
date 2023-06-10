@@ -31,6 +31,9 @@ const Navbar = () => {
           <a onClick={toggle} className="link right" href="#whatToDo">
             Ne yapılmalı?
           </a>
+          <a onClick={toggle} className="link left" href="#presentation">
+            Sunum
+          </a>
         </div>
         <div className="hamburger" onClick={toggle}>
           <span className="span top"></span>

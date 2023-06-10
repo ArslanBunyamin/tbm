@@ -2,6 +2,7 @@ import React from "react";
 import reading from "../assets/reading.gif";
 import pilates from "../assets/pilates.gif";
 import hobby from "../assets/hobby.gif";
+import videoWave from "../assets/videoWave.png"
 import psychologist from "../assets/psychologist.gif";
 const WhatToDo = () => {
   return (
@@ -54,6 +55,7 @@ const WhatToDo = () => {
           </div>
         </div>
       </div>
+      <img src={videoWave} className="waves"></img>
     </div>
   );
 };

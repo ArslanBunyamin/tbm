@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Graphics from "./components/Graphics";
 import WhatToDo from "./components/WhatToDo";
+import Video from "./components/Video";
 
 function App() {
   useEffect(() => {
@@ -52,6 +53,7 @@ function App() {
         <Effects />
         <Graphics />
         <WhatToDo />
+        <Video />
       </div>
     </div>
   );

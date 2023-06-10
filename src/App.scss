@@ -26,7 +26,7 @@ $textColor: #555;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background-color: rgb(78, 73, 122);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -378,11 +378,11 @@ body {
 
 .whatToDoCont {
   height: auto;
+  background-color: $tekhelet;
 
   .whatToDo {
     overflow: hidden;
     height: 100%;
-    background-color: $tekhelet;
     padding: 0 $sidePaddings 3rem;
     color: #eee;
     font-family: 'Abel', sans-serif;
@@ -439,6 +439,42 @@ body {
         }
       }
     }
+  }
+}
+.presentationCont{
+  background-color: #1d1d1d;
+  padding: 3rem;
+  .presentation{
+    overflow: hidden;
+    height: 100%;
+    padding: 0 $sidePaddings;
+    color: #eee;
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header{
+      font-size: 2.2rem;
+      text-decoration: underline;
+      padding: 1.7rem 0;
+    }
+    .videoCont{
+      background: linear-gradient(45deg, $slate-blue,$tekhelet);
+      width: 100%;
+      height: 480PX;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 20% 80% 35% 65% / 71% 21% 79% 29% ;
+      .video{
+        width: 70%;
+        height: 70%;
+        border: none;
+      }
+    }
+
   }
 }
 
@@ -631,6 +667,19 @@ body {
             .descCont {
               padding: 1.5rem;
             }
+          }
+        }
+      }
+    }
+    .presentationCont{
+      padding: 1rem 0;
+      .presentation{
+        padding-inline: $sidePaddings;
+        .videoCont{
+          border-radius: 1rem;
+          .video{
+            width: 100%;
+            height: 100%;
           }
         }
       }
